@@ -20,11 +20,13 @@ Uma aplicação simples de lista de tarefas desenvolvida para praticar conceitos
 
 ## Estrutura do Código
 
+```
 📁 project-to-do-list
 ┣  index.html
 ┣  style.css
 ┣  script.js
 ┗  read.me
+```
 
 ## Como executar o projeto
 
