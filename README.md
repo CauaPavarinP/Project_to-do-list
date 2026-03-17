@@ -21,17 +21,22 @@ Uma aplicação simples de lista de tarefas desenvolvida para praticar conceitos
 ## Estrutura do Código
 
 📁 project-to-do-list
+
 ┣  index.html
+
 ┣  style.css
+
 ┣  script.js
+
 ┗  read.me
 
 ## Como executar o projeto
 
 1. Clone o repositório:
-   git clone https://github.com/CauaPavarinP/Project_to-do-list.git
+'''git clone https://github.com/CauaPavarinP/Project_to-do-list.git'''
 
-2. Abra o arquivo index.html
+3. Abra o arquivo
+'''index.html'''
 
 
 ## Melhorias futuras
