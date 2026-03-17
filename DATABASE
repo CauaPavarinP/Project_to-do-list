@@ -1,0 +1,7 @@
+CREATE DATABASE Task_List;
+
+CREATE TABLE tasks(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    task VARCHAR(100),
+    
+);
