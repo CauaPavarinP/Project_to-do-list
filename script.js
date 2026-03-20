@@ -3,8 +3,7 @@ const btn = document.getElementById("btn");
 
 const List = document.getElementById("list");
 
-btn.addEventListener('click', function(){
-
+function add_task_list(){
     if( AddTask.value !== ""){
 
         const newTask = document.createElement("li");
@@ -19,7 +18,7 @@ btn.addEventListener('click', function(){
         const deletBtn = document.createElement("button");
         deletBtn.textContent = "Apagar";
         deletBtn.style.display = "none";
-
+        
         checkbox.addEventListener("change", function(){
 
             if(checkbox.checked){
@@ -42,10 +41,16 @@ btn.addEventListener('click', function(){
         List.appendChild(newTask);
         
         AddTask.value = "";
-    }
+}}
 
+btn.addEventListener('click', add_task_list);
+
+//Parâmetro "e" carrega as informações da tecla pressioanda
+AddTask.addEventListener('keydown', function(e){
     
-
-})
-
-
+        if(e.key === 'Enter'){
+            //Puxa a função para criar a task
+            add_task_list();
+        }
+    }
+)
