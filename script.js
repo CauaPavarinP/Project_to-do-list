@@ -41,7 +41,9 @@ function add_task_list(){
         List.appendChild(newTask);
         
         AddTask.value = "";
-}}
+}};
+
+
 
 btn.addEventListener('click', add_task_list);
 
