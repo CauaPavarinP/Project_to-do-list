@@ -1,6 +1,6 @@
 # TO DO LIST
 
-Uma aplicação simples de lista de tarefas desenvolvida para praticar conceitos de front-end e manipulação de DOM, com objetivo de futuramente implementar back-end com java e banco de dados.
+Uma aplicação simples de lista de tarefas desenvolvida para praticar conceitos de front-end e manipulação de DOM, com objetivo de futuramente implementar back-end e banco de dados.
 
 ## Funcionalidades
 
