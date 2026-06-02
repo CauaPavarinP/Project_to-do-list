@@ -13,6 +13,14 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.container-login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
     height: 100vh;
     display: flex;
@@ -31,6 +39,7 @@ body{
     width: 25rem;
     gap: 1rem;
     border-radius: 20px;
+    border: 1px solid black;
     box-shadow: 0 0 60px rgba(0,0,0,0.4);
 }
 
@@ -39,8 +48,6 @@ body{
     flex-direction: column;
     margin: 20px;
     gap: 4px;
-    
-
 }
 
 .buttons{
@@ -58,7 +65,6 @@ body{
     background-color: #3B82F6;
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: 0 0 2px white;
     color: white;
     font-weight: 500;
 }
@@ -69,23 +75,26 @@ body{
 
 }
 
-input{
+.campo input{
     width: 15rem;
     height: 2.3rem;
     border-radius: 5px;
     border: 1px solid black;
-    box-shadow: 0 0  5px white;
     background-color: #334155;
     color: white;
-    
+    transition: 0.3s;
+    padding-left: 10px;
 }
 
-input::placeholder{
-    padding-left: 5px;
+.campo input::placeholder{
     color: #CBD5E1;
 }
 
-a{
+.campo input:hover{
+    border: 1px solid white;
+}
+
+.buttons a{
     color: white;
     text-decoration: none;
 }
