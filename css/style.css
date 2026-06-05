@@ -13,14 +13,6 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.container-login{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .container{
     height: 100vh;
     display: flex;
@@ -28,6 +20,14 @@ body{
 }
 
 /* Login */
+
+.container-login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .form-box{
     background-color: #1E293B;
