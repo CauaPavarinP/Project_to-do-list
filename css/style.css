@@ -196,9 +196,24 @@ nav{
 
 main{
     display: flex;
+    flex-direction: column;
     flex: 1;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    
+}
+
+.task-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.task-card{
+    height: 100px;
+    background-color: black;
 }
 
 .info-main{
