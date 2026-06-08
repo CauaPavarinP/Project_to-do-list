@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+/* Ideias 
+
+    1 - separar o css em arquivos
+
+*/
+
 body{
     height: 100vh;
     background-color: #0F172A;
@@ -272,4 +278,43 @@ main{
 
 .atividade-card li{
     font-size: 20px;
+}
+
+/* Formulario de Nova Tarefa */
+
+form{
+    background-color: black;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.coluna1{
+    height: 100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem   ;
+}
+
+.coluna2{
+    height: 100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.campo_newtask{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
