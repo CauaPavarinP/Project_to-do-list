@@ -287,14 +287,25 @@ form{
     width: 40rem;
     height: 30rem;
     border-radius: 10px;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 2rem;
+}
+
+.form-content{
+    display: flex;
     gap: 3rem;
 }
 
-.coluna1{
-    height: 100%;
+form h1{
+    padding-top: 15px;
+}
+
+.coluna1,
+.coluna2{
+
     width: 15rem;
     display: flex;
     flex-direction: column;
@@ -303,18 +314,135 @@ form{
     gap: 3rem   ;
 }
 
-.coluna2{
-    height: 100%;
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
-
 .campo_newtask{
     display: flex;
     flex-direction: column;
     gap: 3px;
+}
+
+.campo_newtask label{
+    font-size: 1.3rem;
+}
+
+.campo_newtask input[type="text"],
+.campo_newtask input[type="date"],
+.campo_newtask select{
+    width: 14rem;
+    height: 2.3rem;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #2563EB;
+    background-color: #334155;
+    color: white;
+}
+
+#descricao{
+    min-width: 14rem;
+    max-width: 16rem;
+    min-height: 10rem;
+    max-height: 16rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #2563EB;
+    background-color: #334155;
+    color: white;
+}
+
+#descricao::placeholder,
+.campo_newtask input[type="text"]::placeholder{
+    color: #CBD5E1;
+}
+
+.opcoes-prioridades{
+    padding: 10px;
+}
+
+form button{
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #3B82F6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover{
+    scale: calc(1.03);
+    background-color: #5f96f0;
+}
+
+/* Tabela para gerenciar as tabelas    */
+
+.gerenciar-tarefas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+table{
+    width: 900px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: black;
+}
+
+th{
+    background-color: #2563EB;
+    padding: 12px;
+    text-align: left;
+}
+
+td{
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+tr:hover{
+    background-color: #334155;
+}
+
+td button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.editar{
+    background-color: #3B82F6;
+    color: white;
+}
+
+.excluir{
+    background-color: #EF4444;
+    color: white;
+}
+
+.paginacao{
+    display: flex;
+    gap: 10px;
+}
+
+.paginacao button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #334155;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.paginacao button:hover{
+    background-color: #2563EB;
+}
+
+.pagina-ativa{
+    background-color: #2563EB;
 }
