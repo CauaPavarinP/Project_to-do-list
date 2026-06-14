@@ -16,31 +16,31 @@
                 <h3 class="ToDoList">ToDoList</h3>
             </header>
             <nav>
-                <button class="buttons-sidebar">
+                <button class="buttons-sidebar" id="btn-dashboard">
                     <span class="info-buttons">
                         <i class="material-symbols-outlined"> analytics </i>
                         <span>Dashboard</span>
                     </span>
                 </button>
 
-                <button class="buttons-sidebar">
+                <button class="buttons-sidebar" id="btn-novaTarefa">
                     <span class="info-buttons">
                         <i class="material-symbols-outlined"> analytics </i>
                         <span>Nova Tarefa</span>
                     </span>
                 </button>
 
-                <button class="buttons-sidebar">
+                <button class="buttons-sidebar" id="btn-gerenciarTarefas">
                     <span class="info-buttons">
                         <i class="material-symbols-outlined"> analytics </i>
                         <span>Gerenciar Tarefas</span>
                     </span>
                 </button>
 
-                <button class="buttons-sidebar">
+                <button class="buttons-sidebar" id="btn-configuracao">
                     <span class="info-buttons">
                         <i class="material-symbols-outlined"> analytics </i>
-                        <span>Dashboard</span>
+                        <span>Configuração</span>
                     </span>
                 </button>
             </nav>
@@ -54,10 +54,8 @@
                 </div>
             </header>
 
-            <main>
-                <div class="info-main">
+            <main id="conteudo-principal">
 
-                </div>
             </main>
         </div>
 
@@ -66,5 +64,15 @@
             
         </footer>
     </div>
+    <!-- Type="module" - permite que o arquivo possa usar import e export -->
+    <script type="module" src="js/script.js"></script>
 </body>
+
+<!--
+ Coisas Para Lembrar
+
+ components - Guarda trechos de interface que o JS vai renderizar 
+
+-->
+
 </html>
