@@ -11,6 +11,9 @@
 </head>
 <body>
     <div class="container">
+        <!--
+            SIDEBAR
+        -->
         <aside class="sidebar">
             <header class="sidebar-header">
                 <h3 class="ToDoList">ToDoList</h3>
@@ -46,6 +49,9 @@
             </nav>
         </aside>
 
+        <!--
+            ÁREA DO USUÁRIO 
+        -->
         <div class="content">
             <header class="content-header">
                 <div class="user">
@@ -54,6 +60,9 @@
                 </div>
             </header>
 
+            <!--
+                CONTEÚDO PRINCIPAL
+            --> 
             <main id="conteudo-principal">
 
             </main>
@@ -67,17 +76,4 @@
     <!-- Type="module" - permite que o arquivo possa usar import e export -->
     <script type="module" src="js/script.js"></script>
 </body>
-
-<!--
- Anotações
-
-    components - Guarda trechos de interface que o JS vai renderizar 
- 
-    SPA (Single Page Application) - É um tipo de aplicação que utiliza uma única página HTML.
-    Em vez de recarregar páginas inteiras, o JavaScript altera apenas partes da interface
-    (no meu caso, o conteúdo da tag <main>), removendo o conteúdo atual e renderizando
-    o componente selecionado.
-
- -->
-
 </html>

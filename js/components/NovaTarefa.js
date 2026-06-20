@@ -1,13 +1,13 @@
 export function NovaTarefa(){
     return `
-        <form action="NovaTarefa">
+        <form id="NovaTarefa">
             <h1>Nova Tarefa</h1>
 
                 <div class="form-content">
                     <div class="coluna1">
                         <div class="campo_newtask">
                             <label>Nome da Tarefa</label>
-                            <input type="text" name="name" placeholder="Escreva o nome da tarefa">
+                            <input type="text" id="nomeTarefa" name="name" placeholder="Escreva o nome da tarefa">
                         </div>
 
                         <div class="campo_newtask">
@@ -19,7 +19,7 @@ export function NovaTarefa(){
                     <div class="coluna2">
                         <div class="campo_newtask">
                             <label>Data Limite</label>
-                            <input type="date">
+                            <input type="date" id="input-dataLimite">
                         </div>
 
                         <div class="campo_newtask">
@@ -47,7 +47,7 @@ export function NovaTarefa(){
                         <div class="campo_newtask">
                             <label>Categoria</label>
                                 
-                            <select name="categoria" id="">
+                            <select name="categoria" id="categoria">
                                 <option value="">Selecionar</option>
                                 <option value="estudos">Estudos</option>
                                 <option value="casa">Casa</option>
