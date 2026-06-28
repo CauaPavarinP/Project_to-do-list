@@ -28,17 +28,17 @@ export function NovaTarefa(){
 
                             <div class="opcoes-prioridades">
                                 <label>
-                                    <input type="radio" name="prioridade" value="baixa">
+                                    <input id="prioridade" type="radio" name="prioridade" value="baixa">
                                     Baixa
                                 </label>
 
                                 <label>
-                                    <input type="radio" name="prioridade" value="media">
+                                    <input id="prioridade" type="radio" name="prioridade" value="media">
                                     Média
                                 </label>
 
                                 <label>
-                                    <input type="radio" name="prioridade" value="alta">
+                                    <input id="prioridade" type="radio" name="prioridade" value="alta">
                                     Alta
                                 </label>
                             </div>
@@ -59,6 +59,9 @@ export function NovaTarefa(){
                 </div>
                     
             <button type="submit">Criar Tarefa</button>
+
+            <div id="msg_tarefa"></div>
+
         </form>
     `
 }

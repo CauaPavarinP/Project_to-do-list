@@ -153,7 +153,6 @@ nav{
     transition: 0.3s;
 }
 .buttons-sidebar:hover{
-    scale: calc(1.02);
     background-color: #263549;
 }
 
@@ -215,8 +214,7 @@ main{
     flex: 1;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    
+    gap: 2rem;  
 }
 
 .info-grid{
@@ -285,7 +283,7 @@ main{
 form{
     background-color: black;
     width: 40rem;
-    height: 30rem;
+    min-height: 30rem;
     border-radius: 10px;
 
     display: flex;
@@ -301,6 +299,18 @@ form{
 
 form h1{
     padding-top: 15px;
+}
+
+#msg_tarefa{
+    display: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+.msg-erro{
+    background-color: red;
 }
 
 .coluna1,
@@ -369,7 +379,6 @@ form button{
 }
 
 form button:hover{
-    scale: calc(1.03);
     background-color: #5f96f0;
 }
 
