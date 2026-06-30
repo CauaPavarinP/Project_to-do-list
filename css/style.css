@@ -393,6 +393,7 @@ form button:hover{
 
 table{
     width: 900px;
+    max-height: 500px;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
