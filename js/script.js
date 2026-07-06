@@ -31,6 +31,7 @@ document
     .addEventListener("click", () => {
         render(GerenciarTarefas);
 
+        
         tarefaTabela();
     });
 
@@ -39,5 +40,7 @@ document
     .addEventListener("click", () => {
         render(config);
     });
+
+
 
 render(DashBoard);

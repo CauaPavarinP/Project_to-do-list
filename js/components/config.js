@@ -7,12 +7,12 @@ export function config(){
                     <label>Nome do Usuário</label>
                     <input type="text">
                  </div>
-
+                <!--
                 <div class="campos-config">
                     <label>Gmail do Usuário</label>
                     <input type="text">
                 </div>
-
+                -->
                 <div class="tema-config">
                     <label>Tema</label>
 

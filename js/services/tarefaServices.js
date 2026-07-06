@@ -1,3 +1,5 @@
+        import { modalEditar } from "../components/ModalEditar.js";
+        
         const tarefas = [];
 
         /////////////////////////////////////////////////////////
@@ -22,7 +24,6 @@
         //                                                      //
         /////////////////////////////////////////////////////////
         export function configurarForm(){
-
             const form = document.querySelector("#NovaTarefa");
 
             form.addEventListener("submit", (e) => {
@@ -44,7 +45,6 @@
         //                                                      //
         /////////////////////////////////////////////////////////
         function adicionarTarefa(){
-
             const campos = pegarCampos();
             const prioridadeSelecionada = prioridade();
 
@@ -55,11 +55,10 @@
                 // Não precisa usar .value, pois a função prioridade() já retorna o valor como uma string.
                 prioridade: prioridadeSelecionada,
                 categoria: campos.selectCategoria.value,
-                status: "pendente"
+                status: "Pendente"
             }
             
             tarefas.push(tarefa);
-
             console.log(tarefas);
         }
 
@@ -90,9 +89,7 @@
         //                                                      //
         /////////////////////////////////////////////////////////
         function verificaCampos(){
-            
             const campos = pegarCampos();
-
             //console.log(campos.mensagem);
 
             if(campos.inputNomeTarefa.value == ''){
@@ -101,17 +98,15 @@
                 campos.mensagem.innerHTML = "<span class='msg-erro'> Digite o nome da tarefa </span>"
                 return false;
             }
-
             //arrumar isso
             //campos.mensagem.innerHTML = "<span>puta que pariu</span>";
-
             return true;
         }
 
         /////////////////////////////////////////////////////////
-        //                                                      //
+        //                                                         //
         // Função que salva a prioridade selecionada no formulario //
-        //                                                      //
+        //                                                         //
         /////////////////////////////////////////////////////////
         function prioridade(){
             const prioridade = document.querySelector('input[name=prioridade]:checked');
@@ -125,14 +120,12 @@
         // cadastrada                                           //
         /////////////////////////////////////////////////////////
         export function tarefaTabela(){
+            const tabelaTarefas = document.querySelector('#lista-tarefas');
+            const fechar = document.querySelector('#fecharModal');
 
-            const tabelaTarefas = document.querySelector('table');
-
-            console.log(tarefas);
-
+            tabelaTarefas.innerHTML = "";
 
             for(let i = 0; i < tarefas.length; i++){
-
                 const novaLinha = document.createElement("tr");
 
                 const nomeTarefa = document.createElement("td");
@@ -151,6 +144,8 @@
                 buttonEditar.className = "editar";
                 buttonDeletar.className = "excluir";
                 
+                buttonEditar.dataset.indice = i;
+                buttonDeletar.dataset.indice = i;
 
                 nomeTarefa.innerText = tarefas[i].nome;
                 dataTarefa.innerText = tarefas[i].dataLimite;
@@ -172,15 +167,52 @@
                 buttonsTarefa.appendChild(buttonDeletar);
                 //buttonsTarefa.appendChild(Checkbox);
 
+                buttonEditar.addEventListener("click", () => {
+                    //insertAdjacentHtml - pega uma string contendo HTML e a insere no DOM (na página)
+                    document.body.insertAdjacentHTML(
+                        "beforeend",
+                        modalEditar()
+                    )
 
-                
+                    const modal = document.querySelector('.modal-overlay');
+                    const fechar = document.querySelector('#fecharModal');
+
+                   document.querySelector("#EditarNome").value = tarefas[i].nome;
+
+                    fechar.addEventListener("click", () => {
+                        console.log("foi");
+                        modal.remove();
+                    })
+
+                    const Salvar = document.querySelector("#SalvarModal");
+
+                    Salvar.addEventListener("click", () => {
+                        const inputModal = document.querySelector("#EditarNome");
+
+                        tarefas[i].nome = inputModal.value;
+                        tarefaTabela();
+                        modal.remove();
+                    })
+                });
+
+                buttonDeletar.addEventListener("click", () => {
+                    //array.splice(inicio, quantidade, novoElemento);
+                    //i - posição da tarefa
+                    //1 - remove 1 elemento
+                    // novoElemento (opcional) → elementos que serão adicionados
+                    tarefas.splice(i,1);
+                    tarefaTabela();
+                })
+
                 tabelaTarefas.appendChild(novaLinha);
             }
-
         }
 
-        function editarTarefa(){
+
+
+        function editarTabela(){
+            const tabela = tarefaTabela();
 
             
-
         }
+
