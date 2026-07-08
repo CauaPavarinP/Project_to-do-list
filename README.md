@@ -132,7 +132,7 @@ Posteriormente serão estudados:
 Clone o projeto:
 
 ```bash
-git clone https://github.com/seuusuario/todolist.git
+https://github.com/CauaPavarinP/Project_to-do-list.git
 ```
 
 Entre na pasta:
@@ -148,8 +148,5 @@ index.html
 ```
 
 ou utilize a extensão **Live Server** do VS Code.
-
-
-**Cauã Pavarin Portolan**
 
 Desenvolvendo este projeto para aprimorar conhecimentos em desenvolvimento Web e construir um portfólio voltado ao mercado de tecnologia.
