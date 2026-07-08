@@ -4,17 +4,17 @@ export function DashBoard(){
         <div class="info-grid">
             <div class="info-card">
                 <h4>Total</h4>
-                <span>14</span>
+                <span id="Total">0</span>
             </div>
 
             <div class="info-card">
                 <h4>Concluídas</h4>
-                <span>8</span>
+                <span id="Concluida">0</span>
             </div>
 
             <div class="info-card">
                 <h4>Pendentes</h4>
-                <span>6</span>
+                <span id="Pendentes">0</span>
             </div>
         </div>
 
@@ -22,10 +22,8 @@ export function DashBoard(){
             <div class="atividade-card">
                 <h3>Próximas Tarefas</h3>
 
-                <ul>
-                    <li>Estudar CSS</li>
-                    <li>Finalizar Dashboard</li>
-                    <li>Criar tela nova tarefa</li>
+                <ul id="Prox-Tarefa">
+                    
                 </ul>
             </div>
 

@@ -208,11 +208,46 @@
             }
         }
 
+        export function InformacaoCard(){
+            const Total = document.querySelector("#Total");
+            const ConcluidaSpan = document.querySelector("#Concluida");
+            const PendentesSpan = document.querySelector("#Pendentes");
+            const total = tarefas.length;
 
+            const concluidas = tarefas.filter(
+                tarefas => tarefas.status === "Concluida"
+            ).length;
 
-        function editarTabela(){
-            const tabela = tarefaTabela();
+            const pendentes = tarefas.filter(
+                tarefas => tarefas.status === "Pendente"
+            ).length;
 
-            
+            Total.innerHTML = total;
+            PendentesSpan.innerHTML = pendentes;
+            ConcluidaSpan.innerHTML =  concluidas;
         }
 
+        export function TarefasCard(){
+            const ProximaTarefa = document.querySelector("#Prox-Tarefa");
+
+            ProximaTarefa.innerHTML = "";
+
+            //Cria uma mensagem avisando que não tem nenhuma tarefa
+            if(tarefas.length === 0){
+                
+                const mensagem = document.createElement("li");
+
+                mensagem.innerText = "Nenhuma Tarefa Cadastrada Ainda";
+
+                ProximaTarefa.appendChild(mensagem);
+                return;
+            }
+
+            //Mostra os nome das tarefas em Proximas Tarefas
+            for(let i = 0; i < tarefas.length; i++){
+                const CriarLi = document.createElement("li");
+                CriarLi.innerText = tarefas[i].nome;
+
+                ProximaTarefa.appendChild(CriarLi);
+            }
+        }

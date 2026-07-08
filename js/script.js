@@ -4,7 +4,7 @@ import { DashBoard } from "./components/dashboard.js"
 import { NovaTarefa } from "./components/NovaTarefa.js";
 import { GerenciarTarefas } from "./components/GerenciarTarefas.js";
 import { config } from "./components/config.js";
-import { configurarForm, tarefaTabela } from "./services/tarefaServices.js";
+import { configurarForm, tarefaTabela, InformacaoCard, TarefasCard } from "./services/tarefaServices.js";
 
 const main = document.getElementById("conteudo-principal");
 
@@ -16,13 +16,14 @@ document
     .getElementById("btn-dashboard")
     .addEventListener("click", () => {
         render(DashBoard);
+        InformacaoCard();
+        TarefasCard();
     });
 
 document
     .getElementById("btn-novaTarefa")
     .addEventListener("click", () => {
         render(NovaTarefa);
-
         configurarForm();
     });
 
@@ -44,3 +45,5 @@ document
 
 
 render(DashBoard);
+InformacaoCard();
+TarefasCard();
