@@ -136,11 +136,12 @@
                 const statusTarefa = document.createElement("td");
 
                 const buttonsTarefa = document.createElement("td");
+                buttonsTarefa.className = "td-Buttons";
                 const buttonDeletar = document.createElement("button");
                 const buttonEditar = document.createElement("button");
                 const Checkbox = document.createElement("input");
                 Checkbox.type = "radio";
-                Checkbox.className = "Checkbox-tarefa";
+                Checkbox.className = "checkbox-tarefa";
                 buttonEditar.className = "editar";
                 buttonDeletar.className = "excluir";
                 
@@ -163,9 +164,9 @@
                 novaLinha.appendChild(statusTarefa);
                 //novaLinha.appendChild(descricaoTarefa);
                 novaLinha.appendChild(buttonsTarefa);
+                buttonsTarefa.appendChild(Checkbox);
                 buttonsTarefa.appendChild(buttonEditar);
                 buttonsTarefa.appendChild(buttonDeletar);
-                //buttonsTarefa.appendChild(Checkbox);
 
                 buttonEditar.addEventListener("click", () => {
                     //insertAdjacentHtml - pega uma string contendo HTML e a insere no DOM (na página)
@@ -178,6 +179,9 @@
                     const fechar = document.querySelector('#fecharModal');
 
                    document.querySelector("#EditarNome").value = tarefas[i].nome;
+                   document.querySelector("#EditarDescricao").value = tarefas[i].descricao;
+                   document.querySelector("#EditarCategoria").value = tarefas[i].categoria;
+                   document.querySelector("#EditarDataLimite").value = tarefas[i].dataLimite;
 
                     fechar.addEventListener("click", () => {
                         console.log("foi");
@@ -186,10 +190,19 @@
 
                     const Salvar = document.querySelector("#SalvarModal");
 
+                    //Salva as alterações feitas pelo usuario
                     Salvar.addEventListener("click", () => {
                         const inputModal = document.querySelector("#EditarNome");
+                        const inputDescricao = document.querySelector("#EditarDescricao");
+                        const inputPrioridade = document.querySelector("input[name=prioridade]:checked")
+                        const selectCategoria = document.querySelector("#EditarCategoria");
+                        const dataLimite = document.querySelector("#EditarDataLimite");
 
                         tarefas[i].nome = inputModal.value;
+                        tarefas[i].descricao = inputDescricao.value;
+                        tarefas[i].prioridade = inputPrioridade.value;
+                        tarefas[i].categoria = selectCategoria.value;
+                        tarefas[i].dataLimite = dataLimite.value;
                         tarefaTabela();
                         modal.remove();
                     })
@@ -249,5 +262,15 @@
                 CriarLi.innerText = tarefas[i].nome;
 
                 ProximaTarefa.appendChild(CriarLi);
+            }
+        }
+
+        function VerificaTarefaConcluida(){
+            const checkbox = document.querySelector(".checkbox-tarefa");
+
+           if (checkbox.checked) {
+                tarefas[i].status = "Concluida";
+            } else {
+                tarefas[i].status = "Pendente";
             }
         }
