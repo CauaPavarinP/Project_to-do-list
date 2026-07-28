@@ -140,7 +140,7 @@
                 const buttonDeletar = document.createElement("button");
                 const buttonEditar = document.createElement("button");
                 const Checkbox = document.createElement("input");
-                Checkbox.type = "radio";
+                Checkbox.type = "checkbox";
                 Checkbox.className = "checkbox-tarefa";
                 buttonEditar.className = "editar";
                 buttonDeletar.className = "excluir";
@@ -217,6 +217,21 @@
                     tarefaTabela();
                 })
 
+                //Ao clicar no checkbox muda o status da tarefa de Pendente para Concluida   
+                Checkbox.addEventListener("change", () => {
+                    if (Checkbox.checked) {
+                        tarefas[i].status = "Concluida";
+                        statusTarefa.innerText = tarefas[i].status;
+                    } else {
+                        tarefas[i].status = "Pendente";
+                        statusTarefa.innerText = tarefas[i].status;
+                    }
+                });
+
+                if(tarefas[i].status == "Concluida"){
+                    Checkbox.checked = true;
+                }
+
                 tabelaTarefas.appendChild(novaLinha);
             }
         }
@@ -265,12 +280,3 @@
             }
         }
 
-        function VerificaTarefaConcluida(){
-            const checkbox = document.querySelector(".checkbox-tarefa");
-
-           if (checkbox.checked) {
-                tarefas[i].status = "Concluida";
-            } else {
-                tarefas[i].status = "Pendente";
-            }
-        }
